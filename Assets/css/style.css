@@ -192,6 +192,10 @@ h2 {
     transform: scale(1.1, 1.1)
 }
 
+.pie-de-pagina .contact {
+    font-size: 11px;
+}
+
 /*curiosidad*/
 .curiosidad {
     background: #ccc;
