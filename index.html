@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimacionesCSS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./Assets/css/style.css">
+</head>
+
+<body>
+    <div class="grid-container">
+        <header class="header">
+            <h1 class="logo">Catitos</h1>
+            <menu class="navbar">
+                <a href="#galeria"> Galeria </a>
+                <a href="#curiosidad"> Curiosidades </a>
+                <a href="#formulario"> Contacto </a>
+            </menu>
+
+            <div class="cat">
+                <div class="ear ear--left"></div>
+                <div class="ear ear--right"></div>
+                <div class="face">
+                    <div class="eye eye--left">
+                        <div class="eye-pupil"></div>
+                    </div>
+                    <div class="eye eye--right">
+                        <div class="eye-pupil"></div>
+                    </div>
+                    <div class="muzzle"></div>
+                </div>
+            </div>
+
+        </header>
+        <section class="contenedor">
+            <div class="box">
+                <span> Catitos</span>
+            </div>
+            <h2 id="galeria">Galeria</h2>
+            <div class="galeria">
+                <div class="wrapper">
+                    <div class="item">
+                        <div class="polaroid"><img src="./Assets/images/chewy-I-rgDPLKogs-unsplash.jpg">
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="polaroid"><img src="./Assets/images/erik-jan-leusink-IbPxGLgJiMI-unsplash.jpg">
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="polaroid"><img
+                                src="https://images.unsplash.com/photo-1570824104453-508955ab713e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzV8fGdhdG9zfGVufDB8fDB8fHww">
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="polaroid"><img src="./Assets/images/img1.jpg">
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="polaroid"><img src="./Assets/images/img2.jpg">
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="polaroid"><img src="./Assets/images/img3.jpg">
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="polaroid"><img src="./Assets/images/img4.jpg">
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="polaroid"><img src="./Assets/images/paul-hanaoka-jx9ZWM02abs-unsplash.jpg">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="polaroid"><img src="./Assets/images/serjan-midili-GvZwMCS8pPM-unsplash.jpg">
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="polaroid"><img src="./Assets/images/tai-ngo-mJsQ8Xhu8UU-unsplash.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="curiosidad" id="curiosidad">
+                <h2>Curiosidades</h2>
+
+                <p>Los gatos se pasan el 70 % de su vida durmiendo</p>
+                <p>Si ya te olías que los gatos se pasan gran parte de la vida durmiendo, no te equivocas. Según
+                    Veterinary Hub, los gatos se pasan el 70 % de su vida durmiendo, lo que equivale a unas 13-16 horas
+                    al día. Qué vida más dura, ¿eh?</p>
+
+                <img src="./Assets/images/huella.svg" alt="">
+
+            </section>
+
+            <section class="formulario" id="formulario">
+                <h2>Contactanós</h2>
+                <div>
+                    <input class="input" id="Nombre" placeholder="Nombre" type="text" required width="300px">
+                    <input class="input" id="primer" placeholder="Apellido" type="text" required width="300px">
+                </div>
+                <div>
+                    <input class="input" id="mail" type="text" name="mail" placeholder="Ej: miemail@email.com" required
+                        pattern="^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$">
+                </div>
+                <div>
+                    <textarea class="input" id="Mensaje" name="Mensaje" cols="30" rows="5"
+                        placeholder="Escribe tu mensaje..."></textarea>
+                </div>
+
+                <button type="submit">CONTACTAR</button>
+
+            </section>
+        </section>
+
+        <footer class="pie-de-pagina">
+            <p>
+                Catitos @ Desarrollado por NCY-Merino
+            </p>
+            <div class="rrss">
+                <a href="http://" target="_blank" rel="noopener noreferrer"><img src="./Assets/images/rrss/github.svg"
+                        alt="github"></a>
+                <a href="http://" target="_blank" rel="noopener noreferrer"><img src="./Assets/images/rrss/linkedin.svg"
+                        alt="linkedin"></a>
+                <a href="#" target="_blank" rel="noopener noreferrer"><img src="./Assets/images/rrss/facebook.svg"
+                        alt="facebook"></a>
+                <a href="#" target="_blank" rel="noopener noreferrer"><img src="./Assets/images/rrss/instagram.svg"
+                        alt="instagram"></a>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

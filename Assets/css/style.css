@@ -1,0 +1,541 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Afacad Flux", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*contenedor principal */
+.grid-container {
+    display: grid;
+    max-height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        'header'
+        'contenedor'
+        'pie-de-pagina';
+}
+
+/*Navegacion*/
+.header {
+    padding: 0 5px;
+    grid-area: header;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 90px auto;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        'logo navbar';
+    background: black;
+    min-height: 60px;
+    color: white;
+    position: relative;
+}
+
+.header .logo {
+    grid-area: logo;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 30px;
+}
+
+.header .navbar {
+    grid-area: navbar;
+    text-align: right;
+    padding-left: 0;
+}
+
+.header .navbar a {
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    margin: 0 3px;
+    text-decoration: none;
+    font-weight: 400;
+    transition: all ease-in-out 0.5s;
+    cursor: pointer;
+    position: relative;
+    font-size: 12px;
+}
+
+.header .navbar a:after {
+    position: absolute;
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0%;
+    background: rgba(255, 255, 255, 0.7);
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transition: all ease-in-out 0.5s;
+}
+
+.header .navbar a:hover:after {
+    width: 100%;
+    background: rgba(255, 255, 255, 1);
+}
+
+.header .navbar a:hover {
+    color: rgba(255, 255, 255, 1);
+    font-weight: 600;
+}
+
+/* contenedor **/
+
+.contenedor {
+    grid-area: contenedor;
+    overflow-y: auto;
+}
+
+.box {
+    display: flex;
+    width: 100%;
+    background-image: url('../images/img\ principal.jpg');
+    height: 300px;
+    background-attachment: fixed;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.box span {
+    color: white;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+h2 {
+    text-align: center;
+}
+
+/* Galeria efecto polaroid */
+.wrapper {
+    width: 100%;
+    text-align: center;
+}
+
+.polaroid {
+    background: #fff;
+    padding: 1rem;
+    box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.2);
+    padding-bottom: 2.5rem;
+}
+
+.polaroid>img {
+    max-width: 100%;
+    height: auto;
+}
+
+.item {
+    width: 90%;
+    display: inline-block;
+    margin-top: 0.5rem;
+    filter: grayscale(100%);
+    transform: scale(0.8, 0.8) rotate(-5deg);
+}
+
+.item:nth-of-type(2n) {
+    transform: scale(0.8, 0.8) rotate(5deg);
+    transition: all 0.35s;
+}
+
+.item:hover {
+    filter: none;
+    transform: scale(1, 1) rotate(0deg) !important;
+    transition: all 0.35s;
+}
+
+/* footer */
+.pie-de-pagina {
+    grid-area: pie-de-pagina;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 10px 0;
+    position: sticky;
+    bottom: 0;
+}
+
+.pie-de-pagina p {
+    text-align: center;
+    margin: 0 0;
+}
+
+.pie-de-pagina .rrss {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.pie-de-pagina .rrss a {
+    margin: 0 5px;
+}
+
+.pie-de-pagina .rrss a img {
+    width: 40px;
+    filter: grayscale(100%);
+    transition: all ease-in-out 0.5s;
+}
+
+.pie-de-pagina .rrss a:hover img {
+    filter: grayscale(0);
+    transform: scale(1.1, 1.1)
+}
+
+/*curiosidad*/
+.curiosidad {
+    background: #ccc;
+    padding: 10px 15px 20px;
+    text-align: center;
+}
+
+.curiosidad img {
+    width: 40px;
+}
+
+/* formulario */
+.formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.formulario div {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+input,
+textarea {
+    border-radius: 5px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    box-shadow: none;
+    background: transparent;
+    margin: 5px;
+}
+
+button {
+    margin: 5px;
+    padding: 5px;
+}
+
+/** ANIMACION GATITO */
+.cat {
+    position: sticky;
+    height: 170px;
+    width: 170px * 1.13;
+    top: 180px;
+    grid-area: cat;
+    display: none;
+}
+
+/* orejas */
+.ear {
+    position: absolute;
+    top: -30%;
+    height: 60%;
+    width: 25%;
+    background: white;
+
+}
+
+.ear::before,
+.ear::after {
+    content: '';
+    position: absolute;
+    bottom: 24%;
+    height: 10%;
+    width: 5%;
+    border-radius: 50%;
+    background: black;
+}
+
+.ear::after {
+    transform-origin: 50% 100%;
+}
+
+.ear--left {
+    left: -7%;
+    border-radius: 70% 30% 0% 0% / 100% 100% 0% 0%;
+    transform: rotate(-15deg);
+}
+
+ear--left::before,
+ear--left::after {
+    right: 10%;
+}
+
+ear--left::after {
+    transform: rotate(-45deg);
+}
+
+.ear--right {
+    right: -7%;
+    border-radius: 30% 70% 0% 0% / 100% 100% 0% 0%;
+    transform: rotate(15deg);
+}
+
+.ear--right::before,
+.ear--right::after {
+    left: 10%;
+}
+
+.ear--right::after {
+    transform: rotate(45deg);
+}
+
+/* cara */
+.face {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: black;
+    border-radius: 50%;
+}
+
+/*ojos*/
+.eye {
+    position: absolute;
+    top: 35%;
+    height: 30%;
+    width: 31%;
+    background: white;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+}
+
+.eye::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 100%;
+    border-radius: 0 0 50% 50% / 0 0 40% 40%;
+    background: black;
+    animation: blink 4s infinite ease-in;
+}
+
+@keyframes blink {
+    0% {
+        height: 0;
+    }
+
+    90% {
+        height: 0;
+    }
+
+    92.5% {
+        height: 100%;
+    }
+
+    95% {
+        height: 0;
+    }
+
+    97.5% {
+        height: 100%;
+    }
+
+    100% {
+        height: 0;
+    }
+}
+
+.eye::before {
+    content: '';
+    position: absolute;
+    top: 60%;
+    height: 10%;
+    width: 15%;
+    background: white;
+    border-radius: 50%;
+}
+
+.eye--left {
+    left: 0;
+}
+
+.eye--left::before {
+    right: -5%;
+}
+
+.eye--right {
+    right: 0;
+}
+
+.eye--right::before {
+    left: -5%;
+}
+
+.eye-pupil {
+    position: absolute;
+    top: 25%;
+    height: 50%;
+    width: 20%;
+    background: black;
+    border-radius: 50%;
+    animation: look-around 4s infinite;
+}
+
+@keyframes look-around {
+    0% {
+        transform: translate(0)
+    }
+
+    5% {
+        transform: translate(50%, -25%)
+    }
+
+    10% {
+        transform: translate(50%, -25%)
+    }
+
+    15% {
+        transform: translate(-100%, -25%)
+    }
+
+    20% {
+        transform: translate(-100%, -25%)
+    }
+
+    25% {
+        transform: translate(0, 0)
+    }
+
+    100% {
+        transform: translate(0, 0)
+    }
+}
+
+.eye--left .eye-pupil {
+    right: 30%;
+}
+
+.eye--right .eye-pupil {
+    left: 30%;
+}
+
+.eye-pupil::after {
+    content: '';
+    position: absolute;
+    top: 30%;
+    right: -5%;
+    height: 20%;
+    width: 35%;
+    border-radius: 50%;
+    background: white;
+}
+
+.muzzle {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    height: 6%;
+    width: 10%;
+    background: white;
+    transform: translateX(-50%);
+    border-radius: 50% 50% 50% 50% / 30% 30% 70% 70%;
+}
+
+/** Version escritorio **/
+@media screen and (min-width: 768px) {
+    .item {
+        width: 45%;
+    }
+
+    .header {
+        padding: 0 15px;
+    }
+
+    .formulario {
+        margin: auto;
+        width: 70%;
+    }
+
+    .formulario div {
+        flex-direction: row;
+        align-items: stretch;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+    }
+
+    button {
+        max-width: 120px;
+        margin: auto;
+    }
+
+    .curiosidad p {
+        width: 80%;
+        margin: 10px auto;
+    }
+}
+
+@media screen and (min-width: 991px) {
+    .item {
+        width: 30%;
+    }
+
+    .cat {
+        display: flex;
+    }
+
+    .grid-container {
+        grid-template-columns: 200px 1fr;
+        grid-template-areas:
+            'header contenedor'
+            'header contenedor'
+            'header pie-de-pagina';
+    }
+
+    .header {
+        grid-template-columns: 1fr;
+        grid-template-rows: 60px 90px 180px;
+        grid-template-areas:
+            'logo'
+            'navbar'
+            'cat';
+    }
+
+    .header .logo {
+        font-size: 2em;
+        text-align: center;
+        position: sticky;
+        top: 10px;
+    }
+
+    .header .navbar {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        position: sticky;
+        top: 60px;
+
+    }
+
+    .header .navbar a {
+        font-size: 13px;
+        font-size: 15px;
+        margin: 10px 0;
+
+    }
+
+    .pie-de-pagina .rrss a img {
+        width: 25px;
+    }
+}
